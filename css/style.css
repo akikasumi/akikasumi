@@ -1,0 +1,671 @@
+/* 去掉所有标签的默认内外边距 */
+*{
+	/* 外边距为0 */
+	margin: 0;
+	/* 内边距为0 */
+	padding: 0;
+}
+/* 去除列表的默认样式 */
+li{
+	list-style: none;
+}
+/* 去掉超链接a标签的默认下划线 */
+a{
+	text-decoration: none;
+}
+body{
+	background: #F6FBFE
+}
+/* 导航栏 */
+/* 顶部区域 */
+.header-top{
+	/* 设置背景色 */
+	background: #4dac98;
+	/* 高度设置为30px */
+	height: 30px;
+	/* 行高设置为30px */
+	line-height: 30px;
+}
+/* 顶部文字 */
+.header-top p{
+	/* 长度设置为1200px */
+	width: 1200px;
+	/* 居中显示 */
+	margin: auto;
+	/* 设置字体颜色 */
+	color: #FFFFFF;
+	/* 设置字体大小 */
+	font-size: 15px;
+}
+.header{
+	/* 长度设置为100% */
+	width: 100%;
+	/* 设置高度 */
+	height: 60px;
+	/* 设置行高 */
+	line-height: 60px;
+	/* 设置背景 */
+	background: #FFFFFF;
+	/* 设置阴影 */
+	box-shadow: 2px 3px 5px #ccc;
+}
+/* 导航栏 */
+.headerf{
+	/* 设置长度 */
+	width: 1200px;
+	/* 设置居中 */
+	margin: auto;
+}
+/* logo */
+.headerf h3{
+	/* 左浮动 靠左对齐 */
+	float: left;
+	/* 设置高度 */
+	height: 60px;
+	/* 设置行高 */
+	line-height: 60px;
+	/* 字体大小 */
+	font-size: 22px;
+	/* 字体颜色 */
+	color: #4dac98;
+	/* 文字间距 */
+	letter-spacing: 5px;
+}
+/* 导航条 */
+.headerf ul{
+	/* 右浮动 靠右对齐 */
+	float: right;
+}
+.headerf ul li{
+	/* 左浮动 靠左对齐 */
+	float: left;
+	/* 设置100px的左侧外边距 */
+	margin-left: 100px;
+}
+.headerf ul li a{
+	/* 设置颜色 */
+	color: #000000;
+	/* 设置5px下侧的内边距 */
+	padding-bottom: 5px;
+}
+/* 设置class为.active 标签下的a 的样式 */
+.headerf ul .active a{
+	/* 设置颜色 */
+	color: #4dac98;
+	/* 设置下边框为3px 颜色为#4dac98 的实线 */
+	border-bottom: 3px solid #4dac98;
+}
+/* 鼠标移入效果 */
+.headerf ul li a:hover{
+	/* 设置颜色 */
+	color: #4dac98;
+	/* 设置下边框为3px 颜色为#4dac98 的实线 */
+	border-bottom: 3px solid #4dac98;
+}
+/* 首页大图 */
+.ban{
+	/* 弹性布局 */
+	display: flex;
+	/* 两端对齐 */
+	justify-content: space-between;
+	/* 设置长度 */
+	width: 1200px;
+	/* 设置高度 */
+	height: 350px;
+	/* 上下外边距为30 左右居中 */
+	margin: 30px auto;
+}
+/* 左侧图片 */
+.ban-left{
+	/* 设置长度 */
+	width: 820px;
+	/* 设置高度 */
+	height: 100%;
+}
+/* 轮播图 */
+.swiper {
+	/* 相对定位 */
+	position: relative;
+	/* 设置长度 */
+	width: 820px;
+	/* 设置高度 */
+	height: 350px;
+	/* 上外边距0 左右居中 下外边距为20 */
+	margin: 0 auto 20px auto;
+	/* 超出隐藏不显示 */
+	overflow: hidden;
+}
+
+.wrap {
+	/* 相对定位 */
+	position: relative;
+	/* 设置长度 */
+	width: 100%;
+	/* 设置高度 */
+	height: 100%;
+	/* 居中显示 */
+	margin: auto;
+	/* 超出隐藏不显示 */
+	overflow: hidden;
+}
+
+.warp ul {
+	/* 绝对定位 */
+	position: absolute;
+}
+
+.wrap ul li {
+	/* 设置长度 */
+	width: 100%;
+	/* 设置高度 */
+	height: 100%;
+}
+
+.wrap ul li img {
+	/* 设置图片长度 */
+	width: 100%;
+	/* 设置图片高度 */
+	height: 350px;
+	/* 图片超出大小自动延展 防止压缩 */
+	object-fit: cover;
+	/* 设置3px的圆形弧度 */
+	border-radius: 3px;
+}
+/* 底部下标 */
+.wrap ol {
+	/* 绝对定位 */
+	position: absolute;
+	/* 靠.wrap右侧5% */
+	right: 5%;
+	/* 靠.wrap底部20px */
+	bottom: 20px;
+}
+
+.wrap ol li {
+	/* 去除默认属性 */
+	list-style: none;
+	/* 设置高度 */
+	height: 10px;
+	/* 设置长度 */
+	width: 10px;
+	/* 边框 */
+	border: 1px solid #FFF;
+	/* 设置50%的圆弧 */
+	border-radius: 50%;
+	/* 左侧外边距为12px */
+	margin-left: 12px;
+	/* 左浮动 */
+	float: left;
+	/* 鼠标移上去 */
+	cursor: pointer;
+	/* 字体为0 隐藏文字 */
+	font-size: 0px;
+}
+
+.wrap ol .on {
+	/* 选中的背景 */
+	background: #4dac98;
+}
+.ban-right{
+	/* 设置长度 */
+	width: 340px;
+	/* 上下左右内边距为10 */
+	padding: 10px;
+	/* 背景颜色 */
+	background-color: #FFFFFF;
+	/* 阴影 */
+	box-shadow: 2px 1px 10px #ccc;
+	/* 字体颜色 */
+	color: #000;
+	/* 文字居中 */
+	text-align: center;
+}
+.ban-right img{
+	display: block;
+	/* 设置长度 */
+	width: 70px;
+	/* 设置高度 */
+	height: 70px;
+	/* 防止图片变形 */
+	object-fit: cover;
+	/* 50%的圆弧度 */
+	border-radius: 50%;
+	/* 上下外边距20 左右居中 */
+	margin: 20px auto;
+	/* 边框 */
+	border: 5px solid #4dac98
+}
+.ban-right h3{
+	/* 下侧外边距20px */
+	margin-bottom: 20px;
+	/* 字体大小 */
+	font-size: 20px;
+	/* 字体粗细 */
+	font-weight: normal;
+}
+.ban-right p{
+	/* 上侧外边距为10 */
+	margin-top: 10px;
+	/* 字体大小 */
+	font-size: 16px;
+	color: #555;
+}
+/* 文章列表 */
+.zuopin{
+	/* 弹性布局 */
+	display: flex;
+	/* 两端对齐 */
+	justify-content: space-between;
+	/* 设置长度 */
+	width: 1200px;
+	/* 上下外边距20 左右居中 */
+	margin: 20px auto;
+}
+/* 文章 */
+.zuopin-list{
+	/* 弹性布局 */
+	display: flex;
+	/* 换行处理 */
+	flex-wrap: wrap;
+	/* 两端对齐 */
+	justify-content: space-between;
+	/* 设置长度 */
+	width: 30%;
+	/* 上下左右内边距为 10 */
+	padding: 10px;
+	/* 盒子阴影 */
+	box-shadow: 2px 1px 10px #CCC;
+}
+.zuopin .zuopin-list .list-img{
+	/* 设置长度 */
+	width: 100%;
+}
+.zuopin .zuopin-list .list-img img{
+	/* 设置长度 */
+	width: 100%;
+	/* 设置行高 */
+	height: 220px;
+	/* 防止图片变形 */
+	object-fit: cover;
+}
+.zuopin .zuopin-list .list-text{
+	/* 设置长度 */
+	width: 100%;
+}
+.zuopin .zuopin-list .list-text h3{
+	/* 上下外边距为5 左右为0 */
+	margin: 5px 0;
+	/* 设置字体颜色 */
+	color: #333;
+}
+.zuopin .zuopin-list .list-text p{
+	/* 设置行高 */
+	line-height: 1.6;
+	/* 设置字体大小 */
+	font-size: 15px;
+	/* 设置字体颜色 */
+	color: #777777;
+}
+/* 底部 */
+.footer-one{
+	/* 设置长度 */
+	width: 100%;
+	/* 上下内边距10 左右0 */
+	padding: 10px 0;
+	/* 字体颜色 */
+	color: #FFF;
+	/* 背景颜色 */
+	background: #4dac98;
+	/* 文字居中 */
+	text-align: center;
+	/* 字体大小 */
+	font-size: 14px;
+}
+/* 标题 */
+.title{
+	/* 设置长度 */
+	width: 1200px;
+	/* 居中显示 */
+	margin: auto;
+	/* 字体大小 */
+	font-size: 20px;
+}
+.title p{
+	/* 字体颜色 */
+	color: #4dac98;
+	/* 左侧边框 */
+	border-left: 5px solid #4dac98;
+	/* 左侧内边距 */
+	padding-left: 5px;
+}
+/* 关于我们 */
+.about{
+	/* 设置长度 */
+	width: 1180px;
+	/* 设置高度 */
+	height: 580px;
+	/* 上下外边距为20 左右居中 */
+	margin: 50px auto;
+}
+.about-l {
+	/* 左浮动 */
+	float: left;
+	/* 设置长度 */
+	width: 300px;
+	/* 背景颜色 */
+	background: #FFFFFF;
+	/* 上下左右内边距为10 */
+	padding: 10px;
+	/* 阴影 */
+	box-shadow: 2px 1px 10px #CCC;
+}
+/* 左侧图片 */
+.js img{
+	/* 设置长度 */
+	width: 100%;
+	/* 设置高度 */
+	height: 250px;
+	/* 防止图片变形 */
+	object-fit: cover;
+}
+/* 文字介绍 */
+.js p{
+	/* 上下外边距为10 左右为0 */
+	margin: 10px 0;
+}
+/* 字段名称 */
+.js p b{
+	/* 设置成行内块级元素 */
+	display: inline-block;
+	/* 设置长度 */
+	width: 48px;
+	/* 字体颜色 */
+	color: #012883;
+	/* 字体粗细 */
+	font-weight: normal;
+	/* 右侧外边距为10 */
+	margin-right: 10px;
+}
+.about-r {
+	/* 右浮动 */
+	float: right;
+	/* 设置长度 */
+	width: 800px;
+	/* 设置高度 */
+	height: 520px;
+	/* 背景颜色 */
+	background: #FFFFFF;
+	/* 上下左右内边距为20 */
+	padding: 20px;
+	/* 阴影 */
+	box-shadow: 2px 1px 10px #CCC;
+}
+.about-r h3{
+	/* 下侧外边距为20 */
+	margin-bottom: 20px;
+}
+.about-r p{
+	/* 上下外边距为10 左右内边距为0 */
+	margin: 10px 0;
+	/* 行高设置 */
+	line-height: 1.8;
+}
+.about-r p span{
+	/* 字体颜色 */
+	color: #999;
+	/* 字体大小 */
+	font-size: 15px;
+}
+.about-r ul li{
+	/* 鼠标移入变触手 */
+	cursor: pointer;
+	/* 设置为行内块级元素 */
+	display: inline-block;
+	/* 字体颜色 */
+	color: #FFFFFF;
+	/* 背景颜色 */
+	background: rgba(0,0,0,0.3);
+	/* 上下内边距为5 左右内边距为10 */
+	padding: 5px 10px;
+	/* 右侧外边距为15 */
+	margin-right: 15px;
+}
+/* 首页个人技能 */
+.jn ul{
+	/* 设置长度 */
+	width: 1200px;
+	/* 上下外边距为20 左右居中 */
+	margin: 20px auto;
+}
+.jn ul li{
+	/* 设置为行内块级元素 */
+	display: inline-block;
+	/* 字体颜色 */
+	color: #FFFFFF;
+	/* 背景颜色 */
+	background: rgba(0,0,0,0.3);
+	/* 上下内边距为5 左右内边距为10 */
+	padding: 5px 10px;
+	/* 右侧外边距为15 */
+	margin-right: 15px;
+}
+/* 鼠标移入效果 */
+.about-r ul li:hover{
+	/* 背景颜色 */
+	background: #4dac98;
+	/* 字体颜色 */
+	color: #FFFFFF;
+}
+/* 图片集 */
+.tp{
+	/* 弹性布局 */
+	display: flex;
+	/* 子元素横向两端对齐 */
+	justify-content: space-between;
+	/* 设置长度 */
+	width: 1200px;
+	/* 上下外边距50px 左右居中 */
+	margin: 50px auto;
+}
+/* 左侧大图 */
+.tp-left{
+	/* 相对定位 */
+	position: relative;
+	/* 设置长度 */
+	width: 300px;
+	/* 设置高度 */
+	height: 580px;
+}
+.tp-right{
+	/* 相对定位 */
+	position: relative;
+	/* 设置长度 */
+	width: 880px;
+	/* 设置高度 */
+	height: 460px;
+}
+.tp-right ul{
+	/* 弹性布局 */
+	display: flex;
+	/* 换行处理 */
+	flex-wrap: wrap;
+	/* 子元素横向两端对齐 */
+	justify-content: space-between;
+}
+.tp-right ul li {
+	list-style: none;
+	/* 相对定位 */
+	position: relative;
+	/* 设置长度 */
+	width: 280px;
+	/* 设置高度 */
+	height: 280px;
+	/* 下侧外边距为20px */
+	margin-bottom: 20px;
+}
+.tp img{
+	display: block;
+	/* 设置长度 */
+	width: 100%;
+	/* 设置高度 */
+	height: 100%;
+	/* 防止图片变形 */
+	object-fit: cover;
+}
+.tp p{
+	/* 绝对定位 */
+	position: absolute;
+	/* 父级底部的0位置 */
+	bottom: 0;
+	/* 父级左侧的0位置 */
+	left: 0;
+	font-size: 16px;
+	/* 设置长度 */
+	width: 92%;
+	/* 上下左右的内边距为父级的4% */
+	padding: 4%;
+	/* 设置字体颜色 */
+	color: #FFFFFF;
+	/* 设置背景颜色 */
+	background-color: rgba(0,0,0,0.4);
+}
+.za{
+	/* 弹性布局 */
+	display: flex;
+	/* 换行处理 */
+	flex-wrap: wrap;
+	/* 两端对齐 */
+	justify-content: space-between;
+	/* 设置长度 */
+	width: 1200px;
+	/* 上下外边距50 左右居中 */
+	margin: 50px auto;
+}
+.za .za-list{
+	/* 弹性布局 */
+	display: flex;
+	/* 换行处理 */
+	flex-wrap: wrap;
+	/* 两端对齐 */
+	justify-content: space-between;
+	/* 设置长度 */
+	width: 100%;
+	/* 背景颜色 */
+	background-color: #FFFFFF;
+	/* 下外边距20 */
+	margin-bottom: 35px;
+	/* 设置阴影 */
+	box-shadow: 2px 1px 10px #CCC;
+}
+/* 去除最后一个的样式 */
+.za-list:last-child{
+	/* 下侧外边距为0 */
+	margin-bottom: 0;
+}
+.za .za-list .list-img{
+	/* 设置长度 */
+	width: 30%;
+}
+.za .za-list .list-img img{
+	/* 设置为块级元素 */
+	display: block;
+	/* 设置长度 */
+	width: 100%;
+	/* 设置行高 */
+	height: 220px;
+	/* 防止图片变形 */
+	object-fit: cover;
+}
+.za .za-list .list-text{
+	/* 设置长度 */
+	width: 68%;
+}
+.za .za-list .list-text h3{
+	/* 上外边距20 右外边距10 下外边距20 左外边距0 */
+	margin: 20px 10px 20px 0;
+}
+.za .za-list .list-text p{
+	/* 设置行高 */
+	line-height: 1.8;
+	/* 设置字体大小 */
+	font-size: 15px;
+	/* 右侧外边距为20 */
+	margin-right: 20px;
+	/* 设置字体颜色 */
+	color: #777777;
+}
+/* 留言板 */
+.lyy{
+	/* 设置长度 */
+	width: 1100px;
+	/* 上下外边距为50 左右为居中 */
+	margin: 50px auto;
+	/* 上下左右内边距为50 */
+	padding: 50px;
+	/* 背景颜色 */
+	background: #FFFFFF;
+	/* 1px的实线边框 */
+	border:1px soild #4dac98;
+	/* 阴影 */
+	box-shadow: 2px 1px 10px #CCC;
+}
+.lyy-t ul li{
+	/* 设置成行内块级元素 */
+	display: inline-block;
+	/* 设置长度 */
+	width: 33%;
+	/* 设置高度 */
+	height: 50px;
+}
+.lyy-t ul li input{
+	/* 去除默认鼠标点击效果 */
+	outline: none;
+	/* 设置长度 */
+	width: 200px;
+	/* 设置高度 */
+	height: 30px;
+	/* 1px的实线边框 */
+	border: 1px solid #888;
+	/* 圆弧 */
+	border-radius: 6px;
+	/* 左侧内边距 */
+	padding-left: 10px;
+}
+.lyy-b{
+	/* 设置长度 */
+	width: 100%;
+}
+.lyy-b textarea{
+	/* 去除默认鼠标点击效果 */
+	outline: none;
+	/* 设置长度 */
+	width: 100%;
+	/* 设置高度 */
+	height: 250px;
+	/* 圆弧 */
+	border-radius: 6px;
+	/* 内边距 */
+	padding: 10px;
+}
+.lyy-btn {
+	/* 上侧外边距为30 */
+	margin-top: 30px;
+	/* 文字居中 */
+	text-align: center;
+}
+.lyy-btn button{
+	/* 设置鼠标触手 */
+	cursor: pointer;
+	/* 设置长度 */
+	width: 100px;
+	/* 设置高度 */
+	height: 40px;
+	/* 字体大小 */
+	font-size: 16px;
+	/* 背景颜色 */
+	background: #4dac98;
+	/* 字体颜色 */
+	color: #FFFFFF;
+	/* 去掉默认边框线 */
+	border: none;
+}

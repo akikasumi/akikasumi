@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>个人网站</title>
+		<link rel="stylesheet" href="css/style.css">
+	</head>
+	<body>
+		<!-- 导航栏 -->
+		<!-- 导航栏顶部 -->
+		<div class="header-top">
+			<p>欢迎访问我的个人网站~</p>
+		</div>
+		<!-- 导航栏 -->
+		<div class="header">
+			<div class="headerf">
+				<!-- logo 文字 -->
+				<h3>个人博客</h3>
+				<!-- 菜单 -->
+				<ul>
+					<li>
+						<a href="index.html">首页</a>
+					</li>
+					<li>
+						<a href="about.html">个人介绍</a>
+					</li>
+					<li>
+						<a href="zuijin.html">最近在看</a>
+					</li>
+					<li>
+						<a href="za.html">生活随笔</a>
+					</li>
+					<!-- 当前页高亮样式 -->
+					<li class="active">
+						<a href="contant.html">联系我</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<form class="lyy">
+			<div class="lyy-t">
+				<ul>
+					<li>
+						<span>姓名：</span>
+						<input type="text" id="name" placeholder="请输入你的姓名"/>
+					</li>
+					<li>
+						<span>手机号：</span>
+						<input type="text" id="phone" placeholder="请输入你的手机号" />
+					</li>
+					<li>
+						<span>微信：</span>
+						<input type="text" id="wechat" placeholder="请输入你的微信" />
+					</li>
+				</ul>
+			</div>
+			<div class="lyy-b">
+				<textarea id="content" placeholder="请输入你要留言的内容"></textarea>
+			</div>
+			<div class="lyy-btn">
+				<button onclick="goPost()">提交留言</button>
+			</div>
+		</form>
+		<!-- 底部 -->
+		<div class="footer-one">
+			<!-- 文字 -->
+			<p>AKIKASUMI © 个人网站</p>
+		</div>
+		<script>
+			function goPost(){
+				var name = document.getElementById('name').value
+				var phone = document.getElementById('phone').value
+				var wechat = document.getElementById('wechat').value
+				var content = document.getElementById('content').value
+				var regPhone = /^1[3456789]{1}\d{9}$/; 
+				if(!name) {
+					alert('姓名不能为空')
+					return false
+				}
+				if(!phone) {
+					alert('手机不能为空')
+					return false
+				}
+				if(!regPhone.test(phone)){
+					alert('手机号码不正确')
+					return false
+				}
+				if(!wechat) {
+					alert('微信不能为空')
+					return false
+				}
+				if(!content) {
+					alert('内容不能为空')
+					return false
+				}
+				alert('提交成功')
+				window.location.href = 'index.html'
+			}
+		</script>
+	</body>
+</html>
